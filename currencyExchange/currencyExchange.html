@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien</title>
+</head>
+<body>
+
+<FORM>
+    <label style="float: left;"> Amount: <br> <input type="text" id="amount" >  </label>
+    <label style="float: left; margin-left: 50px;"> From Currency: <br>
+        <select id="from-currency">
+            <option>VietNam</option>
+            <option>USD</option>
+
+        </select>
+    </label>
+
+    <label style="float: left; margin-left: 50px;"> To Currency: <br>
+        <select id="to-currency" >
+            <option>VietNam</option>
+            <option>USD</option>
+
+        </select>
+    </label>
+
+    <br>
+
+    <input type="button" onclick="showMessage()" value="Convert" />
+
+</FORM>
+
+<p>Result is: <span id="display_result"></span></p>
+
+<script src="currencyExchange.js" type="text/javascript"></script>
+
+
+
+</body>
+</html>
