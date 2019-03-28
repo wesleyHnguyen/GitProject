@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Body Mass Index</title>
+</head>
+<body>
+    <script>
+        let height = parseFloat(prompt("Nhap chieu cao theo m: "));
+        let weight = parseFloat(prompt("nhap can nang theo kilogram: "));
+        let bmi = weight/(height*height);
+
+        if (bmi < 18.5)
+        {
+            alert("underweight");
+        }else if(bmi >= 18.5 && bmi < 25){
+            alert("normal");
+        }else if (bmi>= 25 && bmi < 30){
+            alert("overweight");
+        }else
+            alert("Obese");
+
+    </script>
+</body>
+</html>
