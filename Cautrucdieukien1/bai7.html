@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 7</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        * Chuong trinh sau se gia su tinh cuoc dien thoai bang tong so phut ho gia dinh goi di
+        * Chuong trinh se cho phep nhap vao tong so phut goi di cua mot ho gia dinh va so tien phi cho moi
+        * phut. Gia su so tien phi cho moi phut neu tong so phut trong khoang 1 - 10 la 3000VND , 11-60 la 2500VND, hon 60 la 2000VND
+        * */
+
+        let callGo = prompt("Nhap tong so phut goi di: ");
+        let callGoToNumber = parseInt(callGo);
+        let bill;
+        if (callGoToNumber < 10)
+            bill = callGoToNumber * 3000;
+        else if(callGoToNumber < 60)
+            bill = callGoToNumber *2500;
+        else
+            bill = callGoToNumber * 2000;
+
+        alert("Tong so tien ma ho gia dinh phai dong la " + bill + "VND") ;
+
+
+    </script>
+</body>
+</html>

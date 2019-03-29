@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let a = prompt("nhap gia tri cho a: ");
+
+
+        let b = prompt("nhap gia tri cho b: ");
+
+        while (parseFloat(b) === 0){
+            alert("Gia tri b phai khac 0. Xin moi nhap lai gia tri b");
+            b = prompt("nhap gia tri cho b: ");
+        }
+
+        if (parseFloat(a) % parseFloat(b) === 0)
+            alert("a chia het cho b");
+        else
+            alert("a khong chia het cho b");
+
+    </script>
+</body>
+</html>

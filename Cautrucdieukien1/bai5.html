@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /**
+         * Chuong trinh sau se xac dinh hoc luc cua hoc sinh dua vao diem thi hoc ky 3 mon cua mot hoc sinh
+         */
+        /
+
+        let toan = prompt("Nhap diem thi toan");
+        let vatLy = prompt("Nhap diem thi vat ly");
+        let hoaHoc = prompt("Nhap diem thi hoa");
+
+        let average = (parseFloat(toan) + parseFloat(vatLy) + parseFloat(hoaHoc))/3;
+
+        if(average < 6.5){
+
+            if(average < 6.0){
+                alert("hoc sinh co hoc luc yeu");
+            }else
+                alert("hoc sinh co hoc luc trung binh");
+
+        }else if(average < 8.0){
+            alert("hoc sinh co hoc luc kha");
+        }else alert("hoc sinh co hoc luc gioi");
+
+    </script>
+</body>
+</html>

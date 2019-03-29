@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let number = prompt("Nhap vao mot so: ");
+         while (parseInt(number) + "" === "NaN"){
+             alert("Ban phai nhap mot chu so. Xin moi nhap lai");
+             number = prompt("Nhap vao mot so: ");
+         }
+
+        if(parseInt(number) < 0)
+        {
+            alert("So ban nhap nho hon 0");
+        }else if(parseInt(number) === 0){
+            alert(number);
+        }else alert("So ban nhap lon hon 0");
+
+    </script>
+</body>
+</html>
