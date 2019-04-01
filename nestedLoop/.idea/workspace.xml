@@ -23,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/../keyBoardEvents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../keyBoardEvents/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../leapYear/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../leapYear/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mouseEvent/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mouseEvent/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../operatorsEx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../operatorsEx/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../switchCaseEx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../switchCaseEx/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../switchStructure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../switchStructure/.idea/workspace.xml" afterDir="false" />
@@ -44,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nestedLoop.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+            <state relative-caret-position="23">
+              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -134,23 +135,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554096051090</updated>
-      <workItem from="1554096052352" duration="1080000" />
+      <workItem from="1554096052352" duration="1312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1080000" />
+    <option name="totallyTimeSpent" value="1312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="706" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962743" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962743" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32969034" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -170,8 +171,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/nestedLoop.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        <state relative-caret-position="23">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
