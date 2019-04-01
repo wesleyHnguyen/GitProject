@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bang cuu chuong</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    let sout = "<table style='width: 650px;height: auto;border: 1px aqua solid;'>";
+
+    for (let i = 1; i <= 9; i++)
+    {
+        sout += "<tr style=' border: 1px aqua solid;'>";
+        for(let j = 2; j <= 9; j++){
+            sout += "<td style=' border: 1px aqua solid;'>" + j + " x " + i + " = " + i*j + "</td>";
+        }
+
+        sout += "</tr>"
+    }
+
+    sout += "</table>";
+
+
+    document.write(sout);
+
+</script>
+
+</body>
+</html>
