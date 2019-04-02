@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        let str = prompt("Nhap mot chuoi: ");
+
+        let arrayFromStr = str.split("");
+        for(let i = 0; i < arrayFromStr.length; i++){
+            if ((arrayFromStr[i] >= "A") && (arrayFromStr[i] <="Z")) {
+                 let tmp = (arrayFromStr[i].charCodeAt(0) + 32);
+                 arrayFromStr[i] = String.fromCharCode(tmp);
+            }else if ((arrayFromStr[i] >= "a") && (arrayFromStr[i] <="z")){
+                let tmp = (arrayFromStr[i].charCodeAt(0) - 32);
+                arrayFromStr[i] = String.fromCharCode(tmp);
+            }
+        }
+
+        let result = arrayFromStr.join("");
+        alert(result);
+    </script>
+
+</body>
+</html>

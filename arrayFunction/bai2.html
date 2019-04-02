@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inserting Dash</title>
+</head>
+<body>
+<script type="text/javascript">
+    let str = prompt("Nhap vao mot day chu so: ");
+    let result = [str[0]];
+
+    for(let i = 1; i < str.length; i++){
+        if ( (parseInt(str[i]) % 2 === 0 ) && (parseInt(str[i-1]) % 2 === 0 ))
+            result.push('-',str[i]);
+        else
+            result.push(str[i]);
+    }
+
+    result = result.join('');
+    alert(result);
+
+</script>
+
+</body>
+</html>
