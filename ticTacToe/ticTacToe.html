@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <style type="text/css">
+
+        h3{
+            width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        p{
+            width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<h3>Caro Game Simple</h3>
+<p id="carogame"></p>
+
+<script type="text/javascript">
+    let b = document.getElementById("carogame");
+    let board = [];
+    let data = "";
+    for (let i = 0; i < 5; i++) {
+        board[i] = new Array("(.)", "(.)", "(.)", "(.)", "(.)");
+    }
+    for (let i = 0; i < 5; i++) {
+        data += "<br/>";
+        for (let j = 0; j < 5; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;";
+        }
+    }
+    data += "<br/><br/><input type='button' value= 'player1' onclick='changeValue(this)' id='player1'>";
+    data += "<br/><br/><input type='button' value= 'player2' onclick='changeValue(this)' id='player2'>";
+    b.innerHTML = data;
+
+    function changeValue(e) {
+        let player = document.getElementById(e.id).id;
+        let positionX = prompt("X: ");
+        let positionY = prompt("Y: ");
+        data = "";
+
+        if(player === "player1")
+            if(board[positionX][positionY] === "(.)"){
+            board[positionX][positionY] = "X";
+            for (let i = 0; i < 5; i++) {
+                data += "<br/>";
+                for (let j = 0; j < 5; j++) {
+                    data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                }
+            }
+            data += "<br/><br/><input type='button' value= 'player1' onclick='changeValue(this)' id='player1'>";
+            data += "<br/><br/><input type='button' value= 'player2' onclick='changeValue(this)' id='player2'>";
+            b.innerHTML = data;
+        }else {
+            alert("Vi tri nay da duoc chon. Xin hay nhap lai!!!");
+        }
+
+        if(player === "player2")
+            if(board[positionX][positionY] === "(.)"){
+                board[positionX][positionY] = "O";
+                for (let i = 0; i < 5; i++) {
+                    data += "<br/>";
+                    for (let j = 0; j < 5; j++) {
+                        data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }
+                }
+                data += "<br/><br/><input type='button' value= 'player1' onclick='changeValue(this)' id='player1'>";
+                data += "<br/><br/><input type='button' value= 'player2' onclick='changeValue(this)' id='player2'>";
+                b.innerHTML = data;
+            }else {
+                alert("Vi tri nay da duoc chon. Xin hay nhap lai!!!");
+            }
+
+        for(let i = 0; i < 5; i++)
+            for(let j = 0; j < 5; j++){
+                if(board[i][j] !== "(.)"){
+                    if(xetTheoDuongCheoTruoc(i,j) || xetTheoDuongCheoNguaSau(i,j) ||xetTheoCot(i,j) || xetTheoHang(i,j))
+                    {
+                        if (board[i][j] === "X") alert("player 1 WIN!!!");
+                        else alert("player 2 WIN!!!");
+                    }
+                }
+
+            }
+    }
+
+    function xetTheoHang(row,column) {
+        let count = 1;
+        for(let j=column+1; j < 5; j++){
+            if(board[row][column] === board[row][j]){
+                count++;
+            }
+        }
+        if (count === 3) return true;
+    }
+
+    function xetTheoCot(row,column) {
+        let count = 1;
+        for(let i=row+1; i < 5; i++){
+            if(board[row][column] === board[i][column]){
+                count++;
+            }
+        }
+        if (count === 3) return true;
+    }
+
+    function xetTheoDuongCheoNguaSau(row,column) {
+        let count = 1;
+        for(let i=row+1,j=column+1; (i < 5) && (j < 5); i++,j++){
+            if(board[row][column] === board[i][j]){
+                count++;
+            }
+        }
+        if (count === 3) return true;
+    }
+
+    function xetTheoDuongCheoTruoc(row,column) {
+        let count = 1;
+        for(let i=row+1,j=column-1; (i < 5) && (j >= 0); i++,j--){
+            if(board[row][column] === board[i][j]){
+                count++;
+            }
+        }
+        if (count === 3) return true;
+    }
+
+</script>
+</body>
+</html>
