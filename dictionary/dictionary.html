@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+
+    <form>
+        <label> Nhap tu can tim kiem: <input type="text" width="200px" id="search">
+            <input type="button" value="Search" onclick="searchNew()"> </label>
+
+    </form>
+
+
+<script type="text/javascript">
+    function searchNew() {
+        let searchingWord = document.getElementById("search").value;
+        let englishWords = ["banana", "apple", "hello", "morning", "newspaper","implement"];
+        let vietNameseWords = ["qua chuoi", "qua tao", "xin chao", "buoi sang", "to bao","thuc hien"];
+        let found = -1;
+
+        for (let i = 0; i < englishWords.length; i++) {
+            if (searchingWord.toLowerCase() === englishWords[i]) {
+                found = i;
+            }
+        }
+
+        if(found !== -1){
+            alert(vietNameseWords[found]);
+        }else
+            alert("Tu ban tim chua duoc cap nhat");
+    }
+</script>
+
+</body>
+</html>
