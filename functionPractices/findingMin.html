@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim gia tri nho nhat trong mang</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        let arr = [3, 5, 1, 8, -3, 7, 8];
+
+        function minIndexArray(arr) {
+            let minInx = 0;
+
+            if(arr.length === 0)
+                minInx = -1 ;
+            else {
+                for(let i = 1; i < arr.length; i++){
+                    if(arr[i] < arr[minInx]){
+                        minInx = i;
+                    }
+                }
+            }
+            return minInx;
+        }
+
+        let minIndex = minIndexArray(arr);
+        if (minIndex === -1){
+            alert("This is an empty Array");
+        }else
+            alert("The minimum number in the Array is: " + arr[minIndex]);
+    </script>
+
+</body>
+</html>
