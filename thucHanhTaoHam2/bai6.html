@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so nguyen duong</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    let number ;
+    let msg = "Nhap vao mot so ";
+
+
+    do {
+        number = parseInt(prompt(msg));
+        if(Number.isNaN(number))
+            msg = "Xin Nhap lai. Ban phai nhap vao mot so";
+
+    }while (Number.isNaN(number));
+
+    function findPositive(num) {
+        if(num > 0)
+            return true;
+    }
+
+    if(number === 0)
+        alert("So da nhap bang 0");
+    else if(findPositive(number)){
+        alert("So da nhap la mot so duong");
+    }else alert("So da nhap la so am");
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim gia tri nho nhat</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    let a = parseInt(prompt("Nhap vao so nguyen thu nhat"));
+    let b = parseInt(prompt("Nhap vao so nguyen thu hai"));
+    let c = parseInt(prompt("Nhap vao so nguyen thu ba"));
+
+    function finMin(a,b,c) {
+        let min = a;
+        if(a > b) min = b;
+        if (a > c) min = c;
+
+        return min;
+    }
+
+    alert("Gia tri nho nhat trong ba so la: " + finMin(a,b,c));
+
+
+</script>
+
+</body>
+</html>

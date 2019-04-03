@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ham dao nguoc mang so nguyen</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let a = [1,2,5,4,2,8,9,0,8,5];
+
+        function reverseArray(arr) {
+
+            let first = 0;
+            let last = arr.length - 1;
+
+            while(first < last){
+                let b = arr[first];
+                arr[first] = arr[last];
+                arr[last] = b;
+                first++;
+                last--;
+            }
+        }
+
+        alert("Array truoc khi dao nguoc" + a);
+        reverseArray(a);
+        alert("Array sau khi dao nguoc" + a);
+
+    </script>
+</body>
+</html>

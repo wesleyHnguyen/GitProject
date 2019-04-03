@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+
+<script>
+    let msg = "Nhap vao mot so nguyen";
+    let number;
+    do {
+        number = parseInt(prompt(msg));
+        if(Number.isNaN(number))
+            msg = "Xin Nhap lai. Ban phai nhap vao mot so nguyen";
+
+         }while (Number.isNaN(number));
+
+
+    function tinhGiaiThua(n) {
+        let result = 1;
+        if (n === 0)
+        {
+            result = 1;
+        }else {
+            for(let i = 1; i <=n; i++){
+                result *= i;
+            }
+        }
+        return result;
+    }
+
+    alert("Giai thua cua " + number + " la: " +tinhGiaiThua(number));
+
+
+</script>
+
+</body>
+</html>

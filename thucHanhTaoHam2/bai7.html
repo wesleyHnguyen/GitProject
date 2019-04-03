@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 7</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    let num1 = Number(prompt("Nhap vao mot so dau tien"));
+    let num2 = Number(prompt("Nhap vao mot so thu hai"));
+
+    let a = {
+            value : num1
+};
+    let b = {
+        value : num2
+    };
+
+
+    function switchNumber(a1,a2) {
+        let tmp = a1.value;
+        a1.value = a2.value;
+        a2.value = tmp;
+    }
+
+    alert("Hai so truoc khi doi cho: " + a.value + ' ' + b.value);
+    switchNumber(a,b);
+
+    alert("Hai so sau khi doi cho: " + a.value + ' ' + b.value);
+
+</script>
+
+</body>
+</html>

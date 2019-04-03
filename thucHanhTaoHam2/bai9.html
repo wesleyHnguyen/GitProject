@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 9</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+    let a = prompt("nhap vao mot ky tu");
+    while (a.length!==1){
+        let a = prompt("nhap vao mot ky tu");
+    }
+
+
+    let b = prompt("nhap vao mot chuoi ky tu");
+    while (!(b.length > 0) ){
+        let b = prompt("nhap vao mot chuoi ky tu");
+    }
+    
+    function count(num,arr) {
+        let cnt = -1;
+        for(let i = 0; i < arr.length; i++){
+            if(num === arr[i]) cnt++;
+        }
+        return cnt;
+    }
+    
+    if(count(a,b) === -1)
+        alert("Khong tim thay ky tu trong chuoi da cho");
+    else
+        alert("So lan xuat hien ky tu la: " + (count(a,b) + 1));
+
+
+
+</script>
+
+
+</body>
+</html>

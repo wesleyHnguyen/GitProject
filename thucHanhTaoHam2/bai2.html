@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh dien tich va  chu vi cua hinh tron</title>
+</head>
+<body>
+
+    <script>
+        
+        const PI = 3.14;
+        let r = Number(prompt("Nhap vao ban kinh hinh tron"));
+        
+        
+        function square(num) {
+            return num*num;
+        }
+        
+        function  areaCircle(r) {
+            return PI*square(r);
+        }
+        
+        function perimeterCircle(r) {
+            return 2*PI*r;
+        }
+
+        alert("Dien tich cua hinh tron la: " + areaCircle(r));
+        alert("Chu vi cua hinh tron la: " + perimeterCircle(r));
+        
+    </script>
+
+
+</body>
+</html>
