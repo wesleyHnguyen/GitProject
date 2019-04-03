@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cac so nguyen to dau tien</title>
+</head>
+<body>
+<script type="text/javascript">
+    let numbers = parseInt(prompt("how many first prime numbers you want to display: "));
+    let count = 0;
+    var N = 2;
+    var primePrint = "";
+    function isAprimeNumber(n) {
+        if (n === 1){
+            return false;
+        }else  if(n === 2){
+            return true;
+        }else {
+            for(let x = 2; x < n; x++){
+                if(n % x === 0){
+                    return false
+                }
+            }
+            return true;
+        }
+    }
+
+     while (count < numbers){
+         if(isAprimeNumber(N)) {
+             count++;
+             primePrint += N + " ";
+         }
+         N++;
+     }
+     document.write(primePrint);
+    </script>
+
+
+
+</body>
+</html>
