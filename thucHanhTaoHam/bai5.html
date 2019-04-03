@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    let nameStar = prompt("Nhap ten ngoi sao");
+    let constellasArray = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function findStar(name) {
+
+        let locateIndex = -1;
+        let starsArray = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+
+        let numberOfStar = starsArray.length;
+
+
+        for(let i = 0; i < numberOfStar;i++){
+            if(name === starsArray[i])
+            {
+                locateIndex = i;
+            }
+        }
+
+        return locateIndex;
+    }
+
+
+    if(findStar(nameStar) !== -1 ){
+        alert("Chom sao tuong ung la: " + constellasArray[findStar(nameStar)]);
+    }else
+        alert("Khong co ngoi sao nay");
+
+</script>
+
+</body>
+</html>
