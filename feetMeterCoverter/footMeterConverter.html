@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen Doi Feet ;&mdash; Meter</title>
+
+    <style>
+        div{
+            width: 900px;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <label>Enter value in feet: <input type="text" id="feet" oninput="convert(this)"> Value in meter:  <span id="mValue">  </span></label>
+    </div>
+    <div>
+        <label>Enter value in meter: <input type="text" id="meter" oninput="convert(this)"> Value in feet:  <span id="fValue">  </span></label>
+    </div>
+    <script type="text/javascript">
+        function feetToMeter(f) {
+            return 0.305 * f;
+        }
+
+        function meterToFeed(m) {
+            return 3.279 * m;
+        }
+
+        function convert(e) {
+            let convertedValue;
+            let unit = e.id;
+            if(unit === "feet")
+            {
+                convertedValue = feetToMeter(e.value);
+
+                document.getElementById("mValue").innerHTML = convertedValue;
+            }else {
+                convertedValue = meterToFeed(e.value);
+                document.getElementById("fValue").innerHTML = convertedValue;
+            }
+        }
+
+    </script>
+
+</body>
+</html>
