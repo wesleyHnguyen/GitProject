@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    let msg = "Enter a string: ";
+    let str;
+    do {
+        str = prompt(msg);
+        msg = "Do not accept empty string. Please try again!!!";
+        //alert(str.length);
+    }while(str.length === 0);
+
+
+    function  isPalindrome(s) {
+        if(s.length >= 2) {
+            let first = 0;
+            let last = s.length - 1;
+            if(s[first] === s[last]) {
+                first++;
+                let subStr = s.substring(first, last);
+                isPalindrome(subStr);
+            }else
+                return false;
+        }
+        return true;
+    }
+
+    if(isPalindrome(str))
+        alert("This is a palindrome");
+    else
+        alert("This is not a palindrome");
+    
+    
+</script>
+
+</body>
+</html>
