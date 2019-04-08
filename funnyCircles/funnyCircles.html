@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funny Circle</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+
+
+<script>
+    function Circle(x ,y ,radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+
+    function getRandomHex(){
+        return Math.floor(Math.random()*255);
+    }
+
+    function getRandomColor(){
+        var red = getRandomHex();
+        var green = getRandomHex();
+        var blue = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green +")";
+    }
+
+    let dx = 2;
+    let dy = -2;
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+    let radius = Math.floor(Math.random() * 80 + 1);
+    let circle= new Circle(x, y, radius);
+    let color = getRandomColor();
+
+    function createCircle() {
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, radius, 0, Math.PI*2);
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        createCircle();
+
+        if(circle.y + dy > canvas.height || circle.y + dy < 0) {
+            dy = -dy;
+        }
+
+        if(circle.x + dx > canvas.width || circle.x + dx < 0) {
+            dx = -dx;
+        }
+        circle.x += dx;
+        circle.y += dy;
+    }
+
+    setInterval(draw, 10);
+</script>
+
+</body>
+</html>
