@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lop hinh chu nhat</title>
+</head>
+<body>
+
+
+<canvas id="myCanvas" width="900px" height="600px"></canvas>
+<div id="perimeterId" style="position: absolute;top:10px;left: 10px;"></div>
+<div id="areaId" style="position: absolute;top:30px;left: 30px;"></div>
+
+<script>
+    let widthRect = Number(prompt("Enter the width for the rectangle: "));
+    let heightRect = Number(prompt("Enter the height for the Rectangle: "));
+
+    function  Rectangle(xUpperLeft, yUpperLeft, width,height) {
+        this.width = width;
+        this.height = height;
+        this.x = xUpperLeft;
+        this.y = yUpperLeft;
+
+        this.areaCal = function () {
+            return this.width*this.height;
+        };
+
+        this.perimeterCal = function () {
+            return (this.width + this.height) * 2;
+        };
+
+
+        this.drawRect = function () {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.beginPath();
+            ctx.rect(this.x,this.y,this.width,this.height);
+            ctx.fillStyle = 'yellow';
+            ctx.fill();
+        }
+    }
+
+
+
+    let rectangle = new Rectangle(20,20,widthRect,heightRect);
+    rectangle.drawRect();
+     document.getElementById("areaId").textContent = "Area of the rectangle is: " +  rectangle.areaCal();
+     document.getElementById("perimeterId").textContent ="Perimeter of the rectangle is: " +  rectangle.perimeterCal();
+
+
+</script>
+
+</body>
+</html>
