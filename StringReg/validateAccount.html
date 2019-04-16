@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Account</title>
+</head>
+<body>
+
+
+<script>
+
+    function validateAccount(str) {
+        let regx = /^[_a-z0-9]{6,}$/;
+
+        if (regx.test(str))
+        {
+            alert("The account is valid");
+
+        }else {
+            alert("The account is not valid")
+        }
+    }
+
+    let valid1 = "123abc_";
+    alert("validate for account 123abc_");
+    validateAccount(valid1);
+    let valid2 = "_abc123";
+    alert("validate for account _abc123");
+    validateAccount(valid2);
+
+     let valid3 =   "______";
+    alert("validate for account ______");
+    validateAccount(valid3);
+
+
+    let isNotvalid1 = "12345";
+     let isNotvalid2 = "1234_";
+    let isNotvalid3 = "abcde";
+    alert("validate for account abcde");
+    validateAccount(isNotvalid3);
+
+
+
+
+</script>
+</body>
+</html>
