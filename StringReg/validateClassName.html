@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Class Name</title>
+</head>
+<body>
+
+
+<script>
+
+    function validateClassName(str) {
+        let regx = /^([CAP])[A-Z0-9a-z]{4}[G-M]$/;
+
+        if(regx.test(str)){
+            alert("The name is valid");
+        }else {
+            alert("The name is not valid");
+        }
+
+    }
+
+
+    let className1 = "C0318G";
+    let className2 = "M0318G";
+    let className3 = "P0323A";
+
+    alert("validate for class name: C0318G");
+    validateClassName(className1);
+
+    alert("validate for class name: M0318G");
+    validateClassName(className2);
+
+    alert("validate for class name: P0323A");
+    validateClassName(className3);
+
+
+</script>
+</body>
+</html>
