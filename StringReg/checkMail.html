@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email validate</title>
+</head>
+<body>
+
+
+<script>
+
+    function checkMail(str) {
+        let regex = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(.[A-Za-z0-9]+)$/;
+
+        if(regex.test(str))
+        {
+            alert("OK");
+        }else
+            alert("Email is not valid");
+    }
+
+    let email1 =  "a@gmail.com";
+    let email2 = "ab@yahoo.com";
+    let email3 = "abc@hotmail.com";
+
+    let email4 = "ab@gmail.";
+
+    alert("email 1: a@gmail.com;");
+    checkMail(email1);
+
+    alert("email 2: ab@yahoo.com;");
+    checkMail(email2);
+
+    alert("email 3: abc@hotmail.com;");
+    checkMail(email3);
+
+    alert("email 4: ab@gmail.");
+    checkMail(email4);
+
+</script>
+</body>
+</html>
