@@ -21,6 +21,16 @@
         return result;
     }
 
+    function count (val,arrs){
+      let count = 0;
+      for(num of arrs){
+        if(val === num)
+            count++;
+      }
+
+      return count;
+    }
+
     let nums = [];
     for(let i=0;i<100;++i){
         nums[i] = Math.floor(Math.random() * 101);
@@ -28,7 +38,8 @@
 
     document.write(nums);
     if(find(val,nums) !== -1){
-        document.write("<i>  The number <b>" + val + "</b> found at:  <b>" + find(val,nums) + "</b> </i>");
+        document.write("<i>  The number <b>" + val + "</b> found at:  <b>" + find(val,nums)
+            + "</b>" + "<b> And there are occurrences of " + count(val,nums) + " </b>"+"</i>" );
     }else {
         document.write("<b> Could not find the given number </b>");
     }
