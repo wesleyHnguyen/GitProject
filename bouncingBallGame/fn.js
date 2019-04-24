@@ -2,8 +2,8 @@ function Ball(x,y,radius) {
     this.x = x;
     this.y = y;
     this.radius = radius;
-    this.speedX = 1;
-    this.speedY = -1;
+    this.speedX = 0.5;
+    this.speedY = -0.5;
 
     this.isCollideTheVerticalBorders = function () {
         return (this.y < this.radius || this.y > canvas.height - this.radius);
@@ -52,8 +52,11 @@ function Bar(x,y,width,height) {
 
 }
 
-function Brick() {
-    
+function Brick(x,y,width,height) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
 }
 
 
