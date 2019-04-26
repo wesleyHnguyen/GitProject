@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove an element from an array</title>
+</head>
+<body>
+<script>
+    let arr = [12,6,3,7,21,5,7];
+    function  tryRemoveFromArray(arr,index) {
+        if(index >= 0){
+            arr.splice(index,1);
+        }
+        return arr;
+    }
+
+    alert(tryRemoveFromArray(arr,2));
+</script>
+</body>
+</html>

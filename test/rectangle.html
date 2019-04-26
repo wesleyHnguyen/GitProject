@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ve hinh chu nhat</title>
+</head>
+<body>
+
+<canvas id="mycanvas" width="800px" height="600px"></canvas>
+
+<script>
+
+    function Rectangle(x,y,width,height,color) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.color = color;
+
+        this.render = function(canvas) {
+            const pen = canvas.getContext("2d");
+            pen.beginPath();
+            pen.rect(this.x,this.y,this.width,this.height);
+            pen.fillStyle = this.color;
+            pen.fill();
+            pen.closePath();
+        }
+    }
+    const canvas = document.getElementById("mycanvas");
+
+    let rect = new Rectangle(10,10,200,100,"#000000");
+    rect.render(canvas);
+
+</script>
+
+</body>
+</html>
